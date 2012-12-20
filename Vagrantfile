@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant::Config.run do |config|
-  config.vm.box = "base"
+  config.vm.box = "obps"
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = File.expand_path("../manifests", __FILE__)
   end 
