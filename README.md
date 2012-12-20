@@ -22,9 +22,9 @@ The next step would be to clone this git-repo, if not allready done:
  `git clone https://github.com/OpenBankProject/OBP-VM`
 
 Now we import the basebox we'd like to use:  
- `vagrant box add base http://files.vagrantup.com/precise64.box`  
+ `vagrant box add obps http://files.vagrantup.com/precise64.box`  
  or  
- `vagrant box add base http://files.vagrantup.com/precise32.box`  
+ `vagrant box add obps http://files.vagrantup.com/precise32.box`  
  or sth else (not tested)
 
 Finally we have to start the process by calling  
