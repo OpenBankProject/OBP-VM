@@ -55,9 +55,14 @@ class compile {
 #  audit  => 'all',
 #}
 # exec { "createOauthKey": command => "", require => File["h2db"] }
-#////insert consumer
-#NAME  	KEY_C  	ID  	ISACTIVE  	DESCRIPTION  		UPDATEDATE  	SECRET  	INSERTDATE  	APPTYPE  	DEVELOPEREMAIL  
-#app	123				app to test oauth			456
+#
+#http://localhost:8082
+#
+#psql? sqlite?
+#
+#mysql_connect("mysql.hostname.com", "db_user", "db_passwd") or die(mysql_error());
+#mysql_select_db("db_name") or die(mysql_error());
+#mysql_query("INSERT INTO CONSUMER(NAME, KEY_C, DESCRIPTION, SECRET) VALUES('app', '123', 'app to test oauth', '456')"); 
 
  exec { "mongoimport":
   command => "mongo localhost/OBP006 /vagrant/configs/mktestdb.js",
