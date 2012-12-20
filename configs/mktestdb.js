@@ -44,13 +44,13 @@ function newAlias() {
  if(Math.random()>.4){
  if(anon==0)
  db.accounts.update({},{$push: {"otherAccounts": 
-{"privateAlias" : "Google ", "url" : "http://google.com/", "holder" : holder, "moreInfo" : "Google inc", "publicAlias" : "publicAlias1", "imageUrl" : "http://www.google.de/images/srpr/logo3w.png"}}})
+{"privateAlias" : "privateAlias1 ", "url" : "http://google.com/", "holder" : holder, "moreInfo" : "Google inc", "publicAlias" : "publicAlias1", "imageUrl" : "http://www.google.de/images/srpr/logo3w.png"}}})
  if(anon==1)
  db.accounts.update({},{$push: {"otherAccounts": 
-{"privateAlias" : "Google ", "url" : "http://google.com/", "holder" : holder, "moreInfo" : "Google inc", "publicAlias" : "publicAlias2", "imageUrl" : "http://www.google.de/images/srpr/logo3w.png"}}})
+{"privateAlias" : "privateAlias2 ", "url" : "http://google.com/", "holder" : holder, "moreInfo" : "Google inc", "publicAlias" : "publicAlias2", "imageUrl" : "http://www.google.de/images/srpr/logo3w.png"}}})
  if(anon==2)
  db.accounts.update({},{$push: {"otherAccounts": 
-{"privateAlias" : "Google ", "url" : "http://google.com/", "holder" : holder, "moreInfo" : "Google inc", "publicAlias" : "publicAlias5", "imageUrl" : "http://www.google.de/images/srpr/logo3w.png"}}})}
+{"privateAlias" : "privateAlias5 ", "url" : "http://google.com/", "holder" : holder, "moreInfo" : "Google inc", "publicAlias" : "publicAlias5", "imageUrl" : "http://www.google.de/images/srpr/logo3w.png"}}})}
  anon++
  return holder
 }
@@ -79,14 +79,15 @@ function newValue() {
 
 function newComment() {
  commentID = ObjectId();
- db.obpcomments.insert({"_id": commentID, "textField": "comment"+Math.round(8*Math.random()), "viewID" : 1+Math.round(8*Math.random()),"date" : ISODateString((date.getTime() + Math.round(2000000*Math.random()))) , "userId" : 1 });
+ db.obpcomments.insert({"_id": commentID, "textField": "comment"+Math.round(8*Math.random()), "viewID" : 1+Math.round(8*Math.random()),"date" : ISODateString(new Date(date.getTime() - Math.round(100000000*Math.random()))) , "userId" : 1 });
  return commentID
 }
 function newCommentAnon() {
  commentID = ObjectId();
- db.obpcomments.insert({"_id": commentID, "textField": "comment"+Math.round(8*Math.random()), "viewID" : 6,"date" : ISODateString((date.getTime() + Math.round(2000000*Math.random()))) , "userId" : 1 });
+ db.obpcomments.insert({"_id": commentID, "textField": "comment"+Math.round(8*Math.random()), "viewID" : 6,"date" : ISODateString(new Date(date.getTime() - Math.round(100000000*Math.random()))) , "userId" : 1 });
  return commentID
 }
+
 function newEnv() {
  date = new Date(date.getTime() - Math.round(100000000*Math.random()));
  var value = newValue();
