@@ -19,17 +19,16 @@ Works fine with http://files.vagrantup.com/precise64.box, some tweaking and test
 
 ##Setup
 
-The project uses a Vagrant+Puppet to create/modify a virtualbox-machine, so obvious you'll need Vagrant and VirtualBox installed.  
+The project uses a Vagrant+Puppet to create/modify a virtualbox-machine, so obviously you'll need Vagrant and VirtualBox installed.  
  `apt-get install vagrant virtualbox`
 
 The next step would be to clone this git-repo, if not allready done:  
  `git clone https://github.com/OpenBankProject/OBP-VM`
 
 Now we import the basebox we'd like to use:  
- `vagrant box add obps http://files.vagrantup.com/precise64.box`  
+ `vagrant box add obps http://files.vagrantup.com/precise64.box` for a 64 bit machine 
  or  
- `vagrant box add obps http://files.vagrantup.com/precise32.box`  
- or sth else (not tested)
+ `vagrant box add obps http://files.vagrantup.com/precise32.box` for a 32 bit machine 
 
 Finally we have to start the process by calling  
  `vagrant up`  
