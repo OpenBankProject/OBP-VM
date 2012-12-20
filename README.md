@@ -2,7 +2,7 @@ vagrant-stuff
 =============
 to test: install vagrant and virtualbox, clone and:<br>
  cd OBP-VM<br>
- vagrant box add base http://files.vagrantup.com/precise64.box<br>
+ vagrant box add base http://files.vagrantup.com/precise64.box (or use precise32)<br>
  vagrant up<br>
  wait<br>
  localhost:7070/OBPS<br>
