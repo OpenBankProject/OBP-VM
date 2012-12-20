@@ -48,12 +48,12 @@ service { “jetty”: enable => true, ensure => running }
 ##Files
 
 `/Vagrantfile`  
-Bla
+Vagrant config file; things like port forwarding and file access for the vm. In fact just  port forwarding and file access for the vm.
 
 `/manifests/default.pp`  
-Blub
+THE puppet file; 
 
 `/configs`  
-peng
+other files needed like configs for jetty, maven and the mongodb-creation script
 
 ##CONTACT
