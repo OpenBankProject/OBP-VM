@@ -58,6 +58,7 @@ Restart jetty
 
 ##ToDo
 
+NOTICE in each file
 more options for mkmongodb.js  
 service { “jetty”: enable => true, ensure => running }  
  servicewatchdirbla
