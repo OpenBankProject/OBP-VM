@@ -48,7 +48,7 @@ service { “jetty”: enable => true, ensure => running }<br>
 
 ##Files
 
-`/Vagrantfile`<br>
+`/Vagrantfile`
 Bla
 
 `/manifests/default.pp`<br>
