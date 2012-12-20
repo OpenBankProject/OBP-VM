@@ -34,6 +34,7 @@ Finally we have to start the process by calling
 Now go and grab some coffee, it could take a while :)
 
 After finishing the OpenBankProject-Server should run at localhost:7070/OBPS
+(login is tesobe@tesobe.com / 123tesobe456)
 
 ##Further commands
 
