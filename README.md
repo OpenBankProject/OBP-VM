@@ -24,7 +24,8 @@ The next step would be to clone this git-repo, if not allready done:
 Now we import the basebox we'd like to use:  
  `vagrant box add base http://files.vagrantup.com/precise64.box`  
  or  
- `vagrant box add base http://files.vagrantup.com/precise32.box`
+ `vagrant box add base http://files.vagrantup.com/precise32.box`  
+ or sth else (not tested)
 
 Finally we have to start the process by calling  
  `vagrant up`  
@@ -35,8 +36,6 @@ Now go and grab some coffee, it could take a while :)
 After finishing the OpenBankProject-Server should run at localhost:7070/OBPS
 
 ##Further commands
-
-
 
 Create new database  
 `vagrant ssh -c "mongo localhost/OBP006 /vagrant/mktestdb.js"`
