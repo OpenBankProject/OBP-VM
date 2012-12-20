@@ -32,13 +32,17 @@ Now we import the basebox we'd like to use:
 
 Finally we have to start the process by calling  
  `vagrant up`  
- (from the directory this README is in)
+ (from the root directory)
 
 Now go and grab some coffee, it could take a while :)
 
 After finishing the OpenBankProject-Server should run at localhost:7070/OBPS  
-(login is tesobe@tesobe.com / 123tesobe456)  
-(oauthkey is 123, secret is 456)
+There is a default user that has all the access 
+login : tesobe@tesobe.com 
+password : 123tesobe456  
+There is also by default a registered application to consume the API through the OAuth 1.0
+Application key :  123
+Application secret : 456
 
 ##Further commands
 
