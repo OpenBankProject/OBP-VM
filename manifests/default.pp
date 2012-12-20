@@ -25,7 +25,6 @@ class files {
  file { ["/home/vagrant/.m2"]: ensure => directory, before => File["/home/vagrant/.m2/settings.xml"], owner => "vagrant" }
  file { "/home/vagrant/.m2/settings.xml": ensure => file, source => "${config_path}/settings.xml", owner => "vagrant" }
  file { "props": path => "/OBPS/MavLift/src/main/resources/props", source => "${config_path}/props", recurse => true, owner => "vagrant" }
- file { "/OBPS/mktestdb.js": ensure => file, source => "${config_path}/mktestdb.js", owner => "vagrant" }
  file { "/etc/default/jetty": ensure => file, source => "${config_path}/jetty" }
  file { "/OBPS/MavLift/src/main/webapp/WEB-INF/jetty.xml": ensure => file, source => "${config_path}/jetty-web.xml" }
 }
@@ -50,7 +49,7 @@ class compile {
  exec { "cpwar": command => "cp -f /OBPS/MavLift/target/opan_bank-1.0.war /usr/share/jetty/webapps/OBPS.war", require => Exec["mvn"] }
  exec { "restartjettyservice": command => "/etc/init.d/jetty restart", require => Exec["cpwar"] }
  exec { "mongoimport":
-  command => "mongo localhost/OBP006 /OBPS/mktestdb.js",
+  command => "mongo localhost/OBP006 /vagrant/mktestdb.js",
   user => vagrant
 #manuell?
  }

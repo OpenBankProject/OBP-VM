@@ -5,6 +5,7 @@ db.dropDatabase();
 ////////
 //Creating data
 ////////
+var anon=0
 var balance_start = Math.floor(1000000*(Math.random()-Math.random()))/100;
 var balance = balance_start;
 var date=new Date();
@@ -36,11 +37,21 @@ function ISODateString(d){
      + pad(d.getUTCMinutes())+':'
      + pad(d.getUTCSeconds())+'.001Z'
 }
+
+
 function newAlias() {
  holder = "holder"+Math.round(100*Math.random());
  if(Math.random()>.4){
+ if(anon==0)
  db.accounts.update({},{$push: {"otherAccounts": 
-{"privateAlias" : "Google ", "url" : "http://google.com/", "holder" : holder, "moreInfo" : "Google inc", "publicAlias" : "google.com", "imageUrl" : "http://www.google.de/images/srpr/logo3w.png"}}})}
+{"privateAlias" : "Google ", "url" : "http://google.com/", "holder" : holder, "moreInfo" : "Google inc", "publicAlias" : "publicAlias1", "imageUrl" : "http://www.google.de/images/srpr/logo3w.png"}}})
+ if(anon==1)
+ db.accounts.update({},{$push: {"otherAccounts": 
+{"privateAlias" : "Google ", "url" : "http://google.com/", "holder" : holder, "moreInfo" : "Google inc", "publicAlias" : "publicAlias2", "imageUrl" : "http://www.google.de/images/srpr/logo3w.png"}}})
+ if(anon==2)
+ db.accounts.update({},{$push: {"otherAccounts": 
+{"privateAlias" : "Google ", "url" : "http://google.com/", "holder" : holder, "moreInfo" : "Google inc", "publicAlias" : "publicAlias5", "imageUrl" : "http://www.google.de/images/srpr/logo3w.png"}}})}
+ anon++
  return holder
 }
 
@@ -68,7 +79,12 @@ function newValue() {
 
 function newComment() {
  commentID = ObjectId();
- db.obpcomments.insert({"_id": commentID, "textField": "comment1", "viewID" : 1+Math.round(8*Math.random()),"date" : ISODateString(date) , "userId" : 1 });
+ db.obpcomments.insert({"_id": commentID, "textField": "comment"+Math.round(8*Math.random()), "viewID" : 1+Math.round(8*Math.random()),"date" : ISODateString((date.getTime() + Math.round(2000000*Math.random()))) , "userId" : 1 });
+ return commentID
+}
+function newCommentAnon() {
+ commentID = ObjectId();
+ db.obpcomments.insert({"_id": commentID, "textField": "comment"+Math.round(8*Math.random()), "viewID" : 6,"date" : ISODateString((date.getTime() + Math.round(2000000*Math.random()))) , "userId" : 1 });
  return commentID
 }
 function newEnv() {
@@ -76,9 +92,9 @@ function newEnv() {
  var value = newValue();
  balance += value.amount;
  balance = Math.round(balance*100)/100
- var comments=[newComment(), newComment()];
+ var comments=[newComment(), newCommentAnon()];
  return {
-  "comments" : comments,
+  "obp_comments" : comments,
   "obp_transaction" : {
    "details" : {
     "new_balance" : {
