@@ -37,15 +37,16 @@ Finally we have to start the process by calling
 
 Now go and grab some coffee, it could take a while :)
 
-After finishing the OpenBankProject-Server should run at localhost:7070/OBPS
-(login is tesobe@tesobe.com / 123tesobe456)
+After finishing the OpenBankProject-Server should run at localhost:7070/OBPS  
+(login is tesobe@tesobe.com / 123tesobe456)  
+(oauthkey is 123, secret is 456)
 
 ##Further commands
 
 Create new database  
 `vagrant ssh -c "mongo localhost/OBP006 /vagrant/mktestdb.js"`
 
-Restart jetty
+Restart jetty  
 `vagrant ssh -c "/etc/init.d/jetty restart"`
 
 ...
@@ -57,6 +58,7 @@ Restart jetty
 
 ##ToDo
 
+NOTICE in each file
 more options for mkmongodb.js  
 service { “jetty”: enable => true, ensure => running }  
  servicewatchdirbla
