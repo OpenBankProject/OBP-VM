@@ -49,10 +49,10 @@ service { “jetty”: enable => true, ensure => running }<br>
 ##Files
 
 `/Vagrantfile`<br>
-bla
+Bla
 
 `/manifests/default.pp`<br>
-blub
+Blub
 
 `/configs`<br>
 peng
