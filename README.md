@@ -1,19 +1,19 @@
 OpenBankProject-Virtual machine
 =============
 
-##ABOUT
+##About
 
 This project is about
 
-##GOALS
+##Goals
 
-##LICENSE
+##License
 
-##STATUS
+##Status
 
 Works fine with http://files.vagrantup.com/precise64.box, some tweaking and testing in progress
 
-##SETUP
+##Setup
 
 The project uses a Vagrant+Puppet to create/modify a virtualbox-machine, so obvious you'll need Vagrant and VirtualBox installed.  
  `apt-get install vagrant virtualbox`
@@ -34,12 +34,24 @@ Now go and grab some coffee, it could take a while :)
 
 After finishing the OpenBankProject-Server should run at localhost:7070/OBPS
 
-##FUTURE
+##Further commands
+
+
+
+Create new database  
+`vagrant ssh -c "mongo localhost/OBP006 /vagrant/mktestdb.js"`
+
+Restart jetty
+`vagrant ssh -c "/etc/init.d/jetty restart"`
+
+...
+
+##Future
 
 -Some GUI at localhost:7070/OBPS/conf?  
 -Place an up to date-warfile in the obps-gitrepo so there's no need to compile on creation of a vm
 
-##TD
+##ToDo
 
 more options for mkmongodb.js  
 service { “jetty”: enable => true, ensure => running }  
@@ -56,4 +68,4 @@ THE puppet file;
 `/configs`  
 other files needed like configs for jetty, maven and the mongodb-creation script
 
-##CONTACT
+##Contact
