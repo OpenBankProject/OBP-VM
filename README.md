@@ -1,18 +1,60 @@
-vagrant-stuff
+OpenBankProject-Virtual machine
 =============
-to test: install vagrant and virtualbox, clone and:<br>
- cd OBP-VM<br>
- vagrant box add base http://files.vagrantup.com/precise64.box (or use precise32)<br>
- vagrant up<br>
- wait<br>
- localhost:7070/OBPS<br>
-<br>
-future?: localhost:7070/OBPS/conf.html<br>
-place an up to date-warfile in the obps-gitrepo<br>
-so there's no need to compile on creation of a vm<br>
-<br>
-<br>
-td:<br>
- more options for mkmongodb.js<br>
- service { “jetty”: enable => true, ensure => running }<br>
-  servicewatchdirbla<br>
+
+##ABOUT
+
+This project is about
+
+##GOALSE
+
+##LICENSE
+
+##STATUS
+
+Works fine with http://files.vagrantup.com/precise64.box, some tweaking and testing in progress
+
+##SETUP
+
+The project uses a Vagrant+Puppet to create/modify a virtualbox-machine,
+so obvious you'll need Vagrant and VirtualBox installed.
+ `apt-get install vagrant virtualbox`
+
+The next step would be to clone this git-repo, if not allready done:
+ `git clone https://github.com/OpenBankProject/OBP-VM`
+
+Now we import the basebox we'd like to use:
+ `vagrant box add base http://files.vagrantup.com/precise64.box`
+ or
+ `vagrant box add base http://files.vagrantup.com/precise32.box`
+
+Finally we have to start the process by calling
+ `vagrant up`
+ (from the directory this README is in)
+
+Now go and grab some coffee, it could take a while :)
+
+After finishing the OpenBankProject-Server should run at localhost:7070/OBPS
+
+##FUTURE
+
+-Some GUI at localhost:7070/OBPS/conf?
+-Place an up to date-warfile in the obps-gitrepo so there's no need to compile on creation of a vm
+
+##TD
+
+more options for mkmongodb.js
+service { “jetty”: enable => true, ensure => running }
+ servicewatchdirbla
+
+##Files
+
+`/Vagrantfile`
+bla
+
+`/manifests/default.pp`
+blub
+
+`/configs`
+peng
+
+##CONTACT
