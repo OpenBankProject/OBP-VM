@@ -3,11 +3,15 @@ OpenBankProject-Virtual machine
 
 ##About
 
-This project is about
+Welcome to the Open Bank Project Virtual Machine 
 
 ##Goals
 
+Make it easy for a developer to start running a local instance of the OBP Server / API
+
 ##License
+
+Apache 2 
 
 ##Status
 
