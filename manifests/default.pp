@@ -49,7 +49,7 @@ class compile {
  exec { "cpwar": command => "cp -f /OBPS/MavLift/target/opan_bank-1.0.war /usr/share/jetty/webapps/OBPS.war", require => Exec["mvn"] }
  exec { "restartjettyservice": command => "/etc/init.d/jetty restart", require => Exec["cpwar"] }
  exec { "mongoimport":
-  command => "mongo localhost/OBP006 /vagrant/mktestdb.js",
+  command => "mongo localhost/OBP006 /vagrant/configs/mktestdb.js",
   user => vagrant
 #manuell?
  }
