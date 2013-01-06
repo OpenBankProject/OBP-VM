@@ -3,7 +3,7 @@ OpenBankProject-Virtual machine
 
 ##About
 
-Welcome to the Open Bank Project Virtual Machine 
+Vagrant and Puppet scripts to create a Virtual Box VM running the Open Bank Project Server / API
 
 ##Goals
 
@@ -37,12 +37,19 @@ Finally we have to start the process by calling
 Now go and grab some coffee, it could take a while :)
 
 After finishing the OpenBankProject-Server should run at localhost:7070/OBPS  
-There is a default user that has all the access 
+There is a default user that has all access 
 login : tesobe@tesobe.com 
 password : 123tesobe456  
 There is also by default a registered application to consume the API through the OAuth 1.0
 Application key :  123
 Application secret : 456
+
+An example API endpoint can be found at: 
+http://youripaddress:8080/OBPS/obp/v1.0/postbank/accounts/tesobe/transactions/anonymous
+
+For the API documentation see: https://github.com/OpenBankProject/OBP-API/wiki/OBP-Public-Facing-REST-API-V1.0-DRAFT
+
+For ssh access to the vagrant box, the username/password is vagrant/vagrant
 
 ##Further commands
 
