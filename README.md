@@ -1,6 +1,11 @@
 OpenBankProject-Virtual machine
 =============
 
+
+##Status
+
+Note: This VM is currently out of date!
+
 ##About
 
 Vagrant and Puppet scripts to create a Virtual Box VM running the Open Bank Project Server / API
