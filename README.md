@@ -4,7 +4,7 @@ OpenBankProject-Virtual machine
 
 ##Status
 
-Note: This VM is currently out of date!
+***Note: This VM is currently out of date!***
 
 ##About
 
