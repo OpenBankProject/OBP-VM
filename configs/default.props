@@ -1,0 +1,2 @@
+db.driver=org.postgresql.Driver
+db.url=jdbc:postgresql://localhost:5432/obp?user=obp_login&password=obp_password
